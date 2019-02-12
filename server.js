@@ -70,7 +70,7 @@ app.get('/category-playlists', function (request, response) {
     
     // Send the list of playlists
     // response.send(data.body.playlists.market.from_token("NL"));
-    response.send(data.body.playlists);
+    response.send(data.body.playlists.market.from_token("CA"));
     
     }, function(err) {
     console.error(err);
