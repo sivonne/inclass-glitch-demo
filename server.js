@@ -65,12 +65,13 @@ app.get('/category-playlists', function (request, response) {
   // Get playlists from a browse category
   // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
   //changed to classical playlist category
-  spotifyApi.getPlaylistsForCategory('indie_alt', { limit : 9 })
+  spotifyApi.getPlaylistsForCategory('indie_alt', { limit : 10 })
     .then(function(data) {
     
     // Send the list of playlists
+    if(category-playlists.categories[0].href("country = NL")){
     response.send(data.body.playlists);
-    
+    }
   }, function(err) {
     console.error(err);
   });
