@@ -64,7 +64,8 @@ app.get('/category-playlists', function (request, response) {
   
   // Get playlists from a browse category
   // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
-  spotifyApi.getPlaylistsForCategory('jazz', { limit : 5 })
+  //changed to classical playlist category
+  spotifyApi.getPlaylistsForCategory('indie_alt', { limit : 9 })
     .then(function(data) {
     
     // Send the list of playlists
