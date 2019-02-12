@@ -60,8 +60,8 @@ $(function() {
     // Display the audio features
     keys.map(function(key, i) {
       if (data.hasOwnProperty(key)) {
-       
-        var feature = $('<h3><a href="' +  data.external_urls.spotify + '"target = "blank">' + data.name + '</a></h3>' + '<p><span class="big-number">' + data[key] + ' </span>'  + key + '</p>');
+        var trackName = $('<li>' + data.track.name + '</li>');
+        var feature = $('<h3><a href="' +  data.spotify.track + '"target = "blank">' + '</a></h3>' + '<p><span class="big-number">' + data[key] + ' </span>'  + key + '</p>');
         feature.appendTo('#audio-features-container');
       }
     });
