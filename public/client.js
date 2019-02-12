@@ -33,7 +33,7 @@ $(function() {
     img.attr('src', data.album.images[0].url);
     img.appendTo('#search-track-container');
   });
-  
+  //need to change the country for the playlist categories
   $.get('/category-playlists', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
     console.group('%cResponse from /category-playlists', 'color: #F037A5; font-size: large');
