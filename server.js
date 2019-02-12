@@ -99,7 +99,7 @@ app.get('/artist', function (request, response) {
     .then(function(data) {
     
       // Send the list of tracks
-      response.send(data.body.track_name);
+      response.send(data.body);
     
     }, function(err) {
       console.error(err);
