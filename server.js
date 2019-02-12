@@ -69,9 +69,8 @@ app.get('/category-playlists', function (request, response) {
     .then(function(data) {
     
     // Send the list of playlists
-    if(category-playlists.categories[0].href("country = NL")){
     response.send(data.body.playlists);
-    }
+    
   }, function(err) {
     console.error(err);
   });
