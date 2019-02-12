@@ -69,11 +69,13 @@ app.get('/category-playlists', function (request, response) {
     .then(function(data) {
     
     // Send the list of playlists
+    // response.send(data.body.playlists.market.from_token("NL"));
     response.send(data.body.playlists);
     
-  }, function(err) {
+    }, function(err) {
     console.error(err);
   });
+  
 });
 
 app.get('/audio-features', function (request, response) {
@@ -97,7 +99,7 @@ app.get('/artist', function (request, response) {
     .then(function(data) {
     
       // Send the list of tracks
-      response.send(data.body);
+      response.send(data.body.track_name);
     
     }, function(err) {
       console.error(err);
