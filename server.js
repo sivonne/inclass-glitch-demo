@@ -69,6 +69,7 @@ app.get('/category-playlists', function (request, response) {
     .then(function(data) {
     
     // Send the list of playlists
+    
     response.send(data.body.playlists);
     
   }, function(err) {
