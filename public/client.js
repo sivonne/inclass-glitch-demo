@@ -132,7 +132,6 @@ $.get('/v1/artists', function(data) {
     var artistName = $('<h5>' + data[0].artists[0].name + '</h5>');
         artistName.appendTo('#top-tracks-container');
 
-
     // Display the audio features
     data.map(function(track, i) {
       var trackName = $('<li>' + track.name + '</li>');
