@@ -33,6 +33,8 @@ $(function() {
     img.attr('src', data.album.images[0].url);
     img.appendTo('#search-track-container');
   });
+  
+  
   //need to change the country for the playlist categories
   $.get('/category-playlists', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
@@ -41,12 +43,17 @@ $(function() {
     console.groupEnd();
     
     // Display the covers of the playlists
-    data.items.map(function(playlist, i) {
-      var img = $('<img class="cover-image"/>');
-      img.attr('src', playlist.images[0].url);
-      img.appendTo('#category-playlists-container');
-    });
+    if(data.playlist.market == "SE"){
+      data.items.map(function(playlist, i) {
+        var img = $('<img class="cover-image"/>');
+        img.attr('src', playlist.images[0].url);
+        img.appendTo('#category-playlists-container');
+      });
+    }
   });
+  
+  
+  
   
    $.get('/audio-features', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
