@@ -155,4 +155,28 @@ $.get('/artist-top-tracks', function(data_2) {
       trackName.appendTo('#top-tracks-container1');
     });
   });  
+  
+  $.get('/recommendations', function(data) {
+    // "Data" is the object we get from the API. See server.js for the function that returns it.
+    console.group('%cResponse from /recommendations', 'color: purple; font-size: large');
+    console.log(data);
+    console.groupEnd();
+    
+    
+    var artistName = $('<h5>' + data[0].artists[0].name + '</h5>');
+        artistName.appendTo('#top-tracks-container1');
+
+    // Display the audio features
+    data.map(function(track, i) {
+      var trackName = $('<li>' + track.name + '</li>');
+      trackName.appendTo('#top-tracks-container1');
+    });
+  }); 
+  
+  
+  
+  
+  
+  
+  
 });

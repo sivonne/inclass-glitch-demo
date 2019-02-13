@@ -138,6 +138,25 @@ app.get('/artist-top-tracks', function (request, response) {
     });
 });
 
+	
+app.get('/recommendations', function (request, response) {
+  
+  // Get information about an artist
+  spotifyApi.getRecommendations('4kGuk6HkL6hwuQrgSWISBv')
+    .then(function(data) {
+    
+      // Send the list of tracks
+      response.send(data.body);
+    
+    }, function(err) {
+      console.error(err);
+    });
+});
+
+
+
+
+
 //-------------------------------------------------------------//
 //------------------------ WEB SERVER -------------------------//
 //-------------------------------------------------------------//
