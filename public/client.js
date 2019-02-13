@@ -80,6 +80,7 @@ $(function() {
     console.log(data);
     console.groupEnd();
     
+    for(i = 0; i < data.length; i++){
     // Display the artist's image
     var img = $('<img class="circle-image" />');
     img.attr('src', data.images[0].url);
@@ -94,7 +95,9 @@ $(function() {
       var genreItem = $('<p>' + genre + '</p>');
       genreItem.appendTo('#artist-container');
     });
+    }
   });
+  
   
   $.get('/artist-top-tracks', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
