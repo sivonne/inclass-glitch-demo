@@ -129,7 +129,7 @@ $.get('/v1/artists', function(data) {
     console.groupEnd();
     
     
-    var artistName = $('<h5>' + data[0].artists[0] + '</h5>');
+    var artistName = $('<h5>' + data[0].artists[0].name + '</h5>');
         artistName.appendTo('#top-tracks-container');
     
 
