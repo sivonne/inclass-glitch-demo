@@ -43,13 +43,14 @@ $(function() {
     console.groupEnd();
     
     // Display the covers of the playlists
-    if(data.playlist.market == "SE"){
+    // if(data.playlist.market == "SE"){
+    if(data.items[0].playlist.country == "SE"){
       data.items.map(function(playlist, i) {
         var img = $('<img class="cover-image"/>');
         img.attr('src', playlist.images[0].url);
         img.appendTo('#category-playlists-container');
       });
-    }
+     }
   });
   
   
