@@ -158,11 +158,11 @@ $.get('/artist-top-tracks', function(data_2) {
   
   $.get('/recommendations', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
-    console.group('%cResponse from /recommendations', 'color: purple; font-size: large');
+    console.group('%cResponse from /recommendations', 'color: #F037A5; font-size: large');
     console.log(data);
     console.groupEnd();
     
-    var artistName = $('<h5>' + data[0].tracks[0].artists[0].name + '</h5>');
+    var artistName = $('<h5>' + data[1].tracks[0].artists[1].name + '</h5>');
         artistName.appendTo('#recommendations-container');
 
    
