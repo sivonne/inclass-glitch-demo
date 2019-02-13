@@ -53,11 +53,11 @@ $(function() {
     console.group('%cResponse from /audio-features', 'color: #F037A5; font-size: large');
     console.log(data);
     console.groupEnd();
-     var trackName = $('<h3>' + data.name + '</h3>'
-    );
     
     // The audio features we want to show
-    var keys = ["danceability", "energy", "acousticness"]
+    var keys = ["danceability", "energy", "acousticness", "id"]
+    
+    var trackName = 
     
     // Display the audio features
     keys.map(function(key, i) {
