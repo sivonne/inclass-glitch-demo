@@ -74,50 +74,41 @@ $(function() {
   });
   
   
-  $.get('/artist', function(data) {
+ $.get('/artist', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
     console.group('%cResponse from /artist', 'color: #F037A5; font-size: large');
     console.log(data);
     console.groupEnd();
     
-    // Display the artist name
-    var artists = '';
+    // Display the artist's image
     var img = $('<img class="circle-image" />');
+    img.attr('src', data.images[0].url);
+    img.appendTo('#artist-container');
+    
+    // Display the artist name
+    var trackName = $('<h3>' + data.name + '</h3>');
+    trackName.appendTo('#artist-container');
+    
+    // Display the artist's genres
+    data.genres.map(function(genre, i) {
+      var genreItem = $('<p>' + genre + '</p>');
+      genreItem.appendTo('#artist-container');
+    });
+  });
+  
+    $.get('/artist', function(data) {
+
+  // Display the artist name
+    var artists = '';
     //for more than one artist
     data.artists.forEach(function(element){
+     //console.log("Loop:" + element); 
      artists = artists + element.name + '';
     });
     
-    var artistName = $('<h5>' + data.artists[0].name + data.artists[1].name  + '</h5>');
-    artistName.appendTo('#artist-container');
-    
-    // img.appendTo('#artist-container');
-    var trackName = $('<h3>' + data.name + '</h3>');
-    data.artists.forEach(function(element){
-    // trackName.appendTo('#artist-container');
-      });
-    // data.genres.map(function(genre, i) {
-    // var genreItem = $('<p>' + genre + '</p>');
-    // genreItem.appendTo('#artist-container');
-    // });
-    
-    
-//     // Display the artist's image
-//     var img = $('<img class="circle-image" />');
-//     img.attr('src', data.images[0].url);
-//     img.appendTo('#artist-container');
-    
-//     // Display the artist name
-//     var trackName = $('<h3>' + data.name + '</h3>');
-    trackName.appendTo('#artist-container');
-    
-//     // Display the artist's genres
-//     data.genres.map(function(genre, i) {
-//       var genreItem = $('<p>' + genre + '</p>');
-//       genreItem.appendTo('#artist-container');
-//     });
+    var artistName = $('<h5>' + data.artists[0].name + data.artists[1].name + '</h5>');
+    artistName.appendTo('#artist-container1');
   });
-  
   
   $.get('/artist-top-tracks', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
