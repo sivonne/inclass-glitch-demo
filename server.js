@@ -65,7 +65,7 @@ app.get('/category-playlists', function (request, response) {
   // Get playlists from a browse category
   // Find out which categories are available here: https://beta.developer.spotify.com/console/get-browse-categories/
   //changed to classical playlist category
-  spotifyApi.getPlaylistsForCategory('kpop', {country : 'CA', limit : 10 })
+  spotifyApi.getPlaylistsForCategory('kpop', {country : 'JP', limit : 10 })
     .then(function(data) {
     
     // Send the list of playlists
@@ -75,7 +75,7 @@ app.get('/category-playlists', function (request, response) {
     }, function(err) {
     console.error(err);
   }),
-  spotifyApi.getPlaylistsForCategory('kpop', {country : 'CA', limit : 10 })
+  spotifyApi.getPlaylistsForCategory('indie_alt', {country : 'CA', limit : 10 })
     .then(function(data2) {
     
     // Send the list of playlists
