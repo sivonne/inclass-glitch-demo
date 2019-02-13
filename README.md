@@ -57,11 +57,11 @@ DONE
 #### Blue: Get an Artist
 
 1. Get another artist.
-
+DONE
 2. Show the popularity value for the artist.
-
+DONE
 3. Show the number of followers the artist has.
-
+DONE
 #### Yellow: Get an Artist's Top Tracks
 
 1. Whose top tracks are these?

@@ -110,7 +110,9 @@ $.get('/v1/artists', function(data) {
     //adds value of popularity
     var pop = $('<p>Popularity: ' + data.artists[0].popularity + '</p>');
     //adds followers for artist
-    var followers = $('<p>Followers: ' + data.artists[0].followers + '</p>');
+    var followers = $('<p>Followers: ' + data.artists[0].followers.total + '</p>');
+  console.log(data.artists[0].followers.total);
+    
     //adds them to correct container
     artistName.appendTo('#artist-container1');
     pop.appendTo('#artist-container1');
