@@ -129,7 +129,7 @@ $.get('/v1/artists', function(data) {
     console.groupEnd();
     
     
-    var artistName = $('<h5>' + data[0].artists[0].name[0] + '</h5>');
+    var artistName = $('<h5>' + data[0].artists[0].name + '</h5>');
         artistName.appendTo('#top-tracks-container');
 
     // Display the audio features
@@ -146,7 +146,7 @@ $.get('/artist-top-tracks', function(data_2) {
     console.groupEnd();
     
     
-    var artistName = $('<h5>' + data_2[1].artists[0].name[2] + '</h5>');
+    var artistName = $('<h5>' + data_2[1].artists[0].name + '</h5>');
         artistName.appendTo('#top-tracks-container1');
 
     // Display the audio features
