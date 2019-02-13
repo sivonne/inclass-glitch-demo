@@ -91,10 +91,10 @@ app.get('/audio-features', function (request, response) {
     });
 });
 
-app.get('/artist', function (request, response) {
+app.get('/v1/artists', function (request, response) {
   
   // Get information about an artist
-  spotifyApi.getArtist(['6jJ0s89eD6GaHleKKya26X','3dBVyJ7JuOMt4GE9607Qin'])
+  spotifyApi.getArtists(['6jJ0s89eD6GaHleKKya26X','3dBVyJ7JuOMt4GE9607Qin'])
     .then(function(data) {
     
       // Send the list of tracks
