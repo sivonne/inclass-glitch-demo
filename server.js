@@ -80,7 +80,7 @@ app.get('/category-playlists', function (request, response) {
 
 app.get('/audio-features', function (request, response) {
   // Get the audio features for a track ID
-  spotifyApi.getAudioFeaturesForTrack('4JpKVNYnVcJ8tuMKjAj50A,2NRANZE9UCmPAS5XVbXL40,24JygzOLM0EmRQeGtFcIcG')
+  spotifyApi.getAudioFeaturesForTracks('4JpKVNYnVcJ8tuMKjAj50A')
     .then(function(data) {
     
       //Send the audio features object
