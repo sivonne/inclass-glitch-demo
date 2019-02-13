@@ -44,13 +44,28 @@ $(function() {
     
     // Display the covers of the playlists
     // if(data.playlist.market == "SE"){
-    if(data.items[0].playlist.country == "SE"){
       data.items.map(function(playlist, i) {
         var img = $('<img class="cover-image"/>');
         img.attr('src', playlist.images[0].url);
         img.appendTo('#category-playlists-container');
       });
-     }
+     
+  });
+    //need to change the country for the playlist categories
+  $.get('/category-playlists', function(data2) {
+    // "Data" is the object we get from the API. See server.js for the function that returns it.
+    console.group('%cResponse from /category-playlists', 'color: #F037A5; font-size: large');
+    console.log(data2);
+    console.groupEnd();
+    
+    // Display the covers of the playlists
+    // if(data.playlist.market == "SE"){
+      data2.items.map(function(playlist, i) {
+        var img = $('<img class="cover-image"/>');
+        img.attr('src', playlist[1].images[1].url);
+        img.appendTo('#category-playlists-container1');
+      });
+     
   });
   
   

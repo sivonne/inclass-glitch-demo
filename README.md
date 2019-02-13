@@ -45,6 +45,7 @@ DONE
 2. Show 10 playlists instead of 5.
 DONE
 3. Different playlists are shown to users in different countries. Show the playlists from another country.
+DONE - changed country to Canada
 
 #### Orange: Get Audio Features for a Track
 
