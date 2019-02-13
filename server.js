@@ -129,7 +129,7 @@ app.get('/artist-top-tracks', function (request, response) {
     }, function(err) {
       console.error(err);
     }),
-    spotifyApi.getArtistTopTracks('0TnOYISbd1XYRBk9myaseg', 'ES')           
+    spotifyApi.getArtistTopTracks('4kGuk6HkL6hwuQrgSWISBv', 'ES')           
     .then(function(data_2) {
       // Send the list of tracks
       response.send(data_2.body.tracks);
