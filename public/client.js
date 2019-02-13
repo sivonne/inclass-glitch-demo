@@ -129,7 +129,7 @@ $.get('/v1/artists', function(data) {
     console.groupEnd();
     
     
-    var artistName = $('<h5>' + data[0].artists[0].name + '</h5>');
+    var artistName = $('<h5>' + data[0].artists[0].name[0] + '</h5>');
         artistName.appendTo('#top-tracks-container');
 
     // Display the audio features
@@ -139,18 +139,18 @@ $.get('/v1/artists', function(data) {
     });
   });
   
-$.get('/artist-top-tracks', function(data1) {
+$.get('/artist-top-tracks', function(data_2) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
     console.group('%cResponse from /artist-top-tracks', 'color: #F037A5; font-size: large');
-    console.log(data1);
+    console.log(data_2);
     console.groupEnd();
     
     
-    var artistName = $('<h5>' + data1[0].artists[0].name + '</h5>');
+    var artistName = $('<h5>' + data_2[1].artists[0].name[2] + '</h5>');
         artistName.appendTo('#top-tracks-container1');
 
     // Display the audio features
-    data1.map(function(track, i) {
+    data_2.map(function(track, i) {
       var trackName = $('<li>' + track.name + '</li>');
       trackName.appendTo('#top-tracks-container1');
     });

@@ -128,17 +128,15 @@ app.get('/artist-top-tracks', function (request, response) {
       response.send(data.body.tracks);
     }, function(err) {
       console.error(err);
-    }), 
-    spotifyApi.getArtistTopTracks('30b9WulBM8sFuBo17nNq9c', 'KOR')           
-    .then(function(data1) {
+    }),
+    spotifyApi.getArtistTopTracks('0TnOYISbd1XYRBk9myaseg', 'ES')           
+    .then(function(data_2) {
       // Send the list of tracks
-      response.send(data1.body.tracks);
+      response.send(data_2.body.tracks);
     }, function(err) {
       console.error(err);
     });
 });
-
-
 
 //-------------------------------------------------------------//
 //------------------------ WEB SERVER -------------------------//
