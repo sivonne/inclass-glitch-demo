@@ -162,16 +162,12 @@ $.get('/artist-top-tracks', function(data_2) {
     console.log(data);
     console.groupEnd();
     
-    
-    var artistName = $('<h5>' + data[0].artists[0].name + '</h5>');
-        artistName.appendTo('#top-tracks-container1');
+    var artistName = $('<h5>' + data[0].tracks[0].artists[0].name + '</h5>');
+        artistName.appendTo('#recommendations-container');
 
-    // Display the audio features
-    data.map(function(track, i) {
-      var trackName = $('<li>' + track.name + '</li>');
-      trackName.appendTo('#top-tracks-container1');
+   
     });
-  }); 
+  
   
   
   

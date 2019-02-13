@@ -142,7 +142,7 @@ app.get('/artist-top-tracks', function (request, response) {
 app.get('/recommendations', function (request, response) {
   
   // Get information about an artist
-  spotifyApi.getRecommendations('4kGuk6HkL6hwuQrgSWISBv')
+  spotifyApi.getRecommendations({ min_energy: 0.4, seed_artists: ['6mfK6Q2tzLMEchAr0e9Uzu', '4DYFVNKZ1uixa6SQTvzQwJ'], min_popularity: 50 })
     .then(function(data) {
     
       // Send the list of tracks
