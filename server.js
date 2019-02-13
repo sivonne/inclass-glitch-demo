@@ -80,7 +80,7 @@ app.get('/category-playlists', function (request, response) {
 
 app.get('/audio-features', function (request, response) {
   // Get the audio features for a track ID
-  spotifyApi.getAudioFeaturesForTracks(['59NBECAQ5tXNmtKbRFcYil, 4uLU6hMCjMI75M1A2tKUQC'])
+  spotifyApi.getAudioFeaturesForTrack(['59NBECAQ5tXNmtKbRFcYil'])
     .then(function(data) {
     
       //Send the audio features object
@@ -94,7 +94,7 @@ app.get('/audio-features', function (request, response) {
 app.get('/artist', function (request, response) {
   
   // Get information about an artist
-  spotifyApi.getArtist('6jJ0s89eD6GaHleKKya26X')
+  spotifyApi.getArtist(['6jJ0s89eD6GaHleKKya26X','3dBVyJ7JuOMt4GE9607Qin'])
     .then(function(data) {
     
       // Send the list of tracks

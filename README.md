@@ -12,9 +12,10 @@ This app uses the *Client Credentials Flow* for authentication, which means you 
 ## Getting Started
 
 1. After registering your app at developer.spotify.com/dashboard, put your app's client ID and secret (which you can find in the Dashboard) into the `.env` file.
+DONE
 
 2. Click on "Show Live" in Glitch and verify that your app works (you should see data in each of the coloured sections).
-
+DONE
 -----
 
 ## Working with the Playground
@@ -32,17 +33,17 @@ This app uses the *Client Credentials Flow* for authentication, which means you 
 #### Pink: Search for a Track
 
 1. Change the song that shows up. *(Hint: look in server.js for the API call)*
-
+DONE
 2. Display the artist name in addition to the song name. *(Hint: look at the whole track object to find the artist name)*
-
+DONE
 3. Make the title link to the song on Spotify. *(Hint: look at the whole track object to find the song URL)*
-
+DONE
 #### Purple: Get a Category's Playlists
 
 1. Get the playlists for a different category! You can find other categories [here](https://beta.developer.spotify.com/console/get-browse-categories/)
-
+DONE
 2. Show 10 playlists instead of 5.
-
+DONE
 3. Different playlists are shown to users in different countries. Show the playlists from another country.
 
 #### Orange: Get Audio Features for a Track
@@ -50,7 +51,7 @@ This app uses the *Client Credentials Flow* for authentication, which means you 
 1. What track are these audio features for?
 
 2. There are more audio features available. Display 2 more features.
-
+DONE
 3. Get the audio features for another track.
 
 #### Blue: Get an Artist
