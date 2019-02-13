@@ -80,26 +80,35 @@ $(function() {
     console.log(data);
     console.groupEnd();
     
-    for(var i = 0; i < data.length; i++){
-      // Display the artist's image
-      var img = $('<img class="circle-image" />');
-      img.attr('src', data.images.url);
-      img.appendTo('#artist-container');
-      // Display the artist name
-      var trackName = $('<h3>' + data.name + '</h3>');
-      trackName.appendTo('#artist-container');
-
-      // Display the artist's genres
-      data.genres.map(function(genre, i) {
-      var genreItem = $('<p>' + data.genre + '</p>');
-      genreItem.appendTo('#artist-container');
-
-      });
-      
-
-
-    }
+    // // Display the artist name
+    // var artists = '';
+    // //for more than one artist
+    // data.artists.forEach(function(element){
+    //  //console.log("Loop:" + element); 
+    //  artists = artists + element.name + '';
+    // });
     
+//     var artistName = $('<h5>' + data.artists[0].name + data.artists[1].name  + '</h5>');
+//     artistName.appendTo('#artist-container');
+    
+    
+    
+var artists = '';
+var img = $('<img class="circle-image" />');
+var trackName = $('<h3>' + data.name + '</h3>');
+var genreItem = $('<p>' + genre + '</p>');
+ 
+    data.artists.forEach(function(element){
+    img.attr('src', data.images[0].url);
+    img.appendTo('#artist-container');
+    
+    trackName.appendTo('#artist-container');
+    data.genres.map(function(genre, i) {
+       genreItem.appendTo('#artist-container');
+    }
+                    
+                    }
+                    });
   });
   
   

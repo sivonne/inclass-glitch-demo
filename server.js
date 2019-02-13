@@ -91,7 +91,7 @@ app.get('/audio-features', function (request, response) {
     });
 });
 
-app.get('/v1/artists', function (request, response) {
+app.get('/artist', function (request, response) {
   
   // Get information about an artist
   spotifyApi.getArtists(['6jJ0s89eD6GaHleKKya26X','3dBVyJ7JuOMt4GE9607Qin'])
