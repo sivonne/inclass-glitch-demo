@@ -130,9 +130,9 @@ app.get('/artist-top-tracks', function (request, response) {
       console.error(err);
     }), 
     spotifyApi.getArtistTopTracks('30b9WulBM8sFuBo17nNq9c', 'KOR')           
-    .then(function(data) {
+    .then(function(data1) {
       // Send the list of tracks
-      response.send(data.body.tracks);
+      response.send(data1.body.tracks);
     }, function(err) {
       console.error(err);
     });
