@@ -96,8 +96,7 @@ $(function() {
     });
   });
   
-    $.get('/artist', function(data) {
-
+$.get('/v1/artists', function(data) {
   // Display the artist name
     var artists = '';
     //for more than one artist
@@ -105,10 +104,21 @@ $(function() {
      //console.log("Loop:" + element); 
      artists = artists + element.name + '';
     });
+    console.log(artists);
     
-    var artistName = $('<h5>' + data.artists[0].name + data.artists[1].name + '</h5>');
+    var artistName = $('<h5>' + data.artists[0].name + '</h5>');
+    //adds value of popularity
+    var pop = $('<p>Popularity: ' + data.artists[0].popularity + '</p>');
+    //adds followers for artist
+    var followers = $('<p>Followers: ' + data.artists[0].followers + '</p>');
+    //adds them to correct container
     artistName.appendTo('#artist-container1');
+    pop.appendTo('#artist-container1');
+    followers.appendTo('#artist-container1');
   });
+  
+  
+  
   
   $.get('/artist-top-tracks', function(data) {
     // "Data" is the object we get from the API. See server.js for the function that returns it.
