@@ -62,7 +62,7 @@ $(function() {
     // if(data.playlist.market == "SE"){
       data2.items.map(function(playlist, i) {
         var img = $('<img class="cover-image"/>');
-        img.attr('src', playlist[0].images[1].url);
+        img.attr('src', playlist.images[0].url);
         img.appendTo('#category-playlists-container1');
       });
      
