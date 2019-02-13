@@ -162,7 +162,7 @@ $.get('/artist-top-tracks', function(data_2) {
     console.log(data);
     console.groupEnd();
     
-    var artistName = $('<h5>' + data[1].tracks[0].artists[1].name + '</h5>');
+    var artistName = $('<h5>' + data[0].tracks[0].artists[0].name + '</h5>');
         artistName.appendTo('#recommendations-container');
 
    
